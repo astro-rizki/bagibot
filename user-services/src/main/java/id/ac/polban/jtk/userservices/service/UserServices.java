@@ -16,7 +16,7 @@ public interface UserServices {
     //add
     public void saveUser(User user);
     //edit
-    public boolean editUser(User user);
+    public boolean editUser(User userDest, User userTarget);
     //delete
     public boolean deleteUser(User user);
     //search
@@ -25,7 +25,7 @@ public interface UserServices {
     public User findUserByUserId(String userId);
     public User findUserByContact(String contact);
     //block
-    public boolean blockUser(User user);
+    public boolean blockUser(String userId);
     //unblock
-    public boolean unblockUser(User user);
+    public boolean unblockUser(String userId);
 }

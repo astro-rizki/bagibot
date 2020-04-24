@@ -1,6 +1,7 @@
 package id.ac.polban.jtk.userservices;
 
 import java.util.logging.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,7 +19,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableDiscoveryClient
 @ComponentScan
 public class UserServicesApplication{
-       
+    private static final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(UserServicesApplication.class);
     public static void main(String[] args) {
         System.setProperty("spring.config.name", "user-services");
         SpringApplication.run(UserServicesApplication.class, args);
